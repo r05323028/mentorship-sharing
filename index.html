@@ -1,40 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Mentorship Sharing</title>
+    <title>Mentorship Sharing</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/sky.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>How to build a Data Intensive Application from scratch?</h3>
+          <p>Eyes: Taiwanese Public Opinion Mining System</p>
+          <p>Sean Chang</p>
+          <p id="currentDate"></p>
+        </section>
+        <section>
+          <!-- self intro -->
+          <section><h3>Who am I?</h3></section>
+          <section>
+            <h3>Sean Chang</h3>
+            <div style="display: flex; flex-direction: row">
+              <div style="display: flex">
+                <ul>
+                  <li>Experiences</li>
+                  <ul>
+                    <li>Software Engineer, TSMC</li>
+                    <li>Data Scientist, KKLab (KKBOX)</li>
+                  </ul>
+                  <li>Interests: #data, #software</li>
+                  <li>Languages: #python, #typescript, #golang, #java</li>
+                </ul>
+              </div>
+              <div style="display: flex"></div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Data Intensive Application</h3>
+          </section>
+		  <section>
+			<h3>Data-intensive computing</h3>
+			<ul>
+				<li>Variety, Velocity, Volume</li>
+				<li>Compute-intensive</li>
+			</ul>
+		  </section>
+		  <section>
+			<h3>Software-as-a-Service (SaaS)</h3>
+			<a href="https://12factor.net/">The Twelve-Factor App</a>
+		  </section>
+        </section>
+		<section>
+			<section>
+				<h3>User Story</h3>
+			</section>
+			<section>
+				<img src="./assets/img/ania_want_it.png" />
+			</section>
+			<section>
+				<table>
+					<thead>
+						<tr>
+							<th>As a</th>
+							<th>I want to</th>
+							<th>So that</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Sean</td>
+							<td>看看最近哪些文章很紅</td>
+							<td>需要一個熱門文章列表</td>
+						</tr>
+						<tr>
+							<td>Sean</td>
+							<td>看看特定的人事物最近發生什麼事</td>
+							<td>需要一個事件時間軸</td>
+						</tr>
+						<tr>
+							<td>Sean</td>
+							<td>看看特定的人事物最近跟誰有關</td>
+							<td>需要一個關係圖</td>
+						</tr>
+						<tr>
+							<td>...</td>
+							<td>...</td>
+							<td>...</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Domain Modeling</h3>
+			</section>
+			<section>
+				<ul>
+					<li>System Blueprint</li>
+					<li>Declarative Business Logics</li>
+				</ul>
+			</section>
+			<section>
+				<div style="display: flex; align-items: center;">
+					<div style="display: flex;"><img height="70%" src="./assets/img/basic_domain.png" /></div>
+					<div style="display: flex;"><img height="70%" src="./assets/img/prediction_domain.png" /></div>
+				</div>
+			</section>
+			<section>
+				<div style="display: flex; align-items: center;">
+					<div style="display: flex;"><img height="70%" src="./assets/img/summary_domain.png" /></div>
+					<div style="display: flex;"><img height="70%" src="./assets/img/function_domain.png" /></div>
+				</div>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Architecture</h3>
+			</section>
+			<section>
+				<ul>
+					<li>Storage, Computing Power</li>
+					<li>Horizontal Scalability</li>
+					<li>Distributed Computing</li>
+					<li>Cloud Native</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Message Queue</h3>
+				<img src="./assets/img/message_queue.png" />
+			</section>
+			<section>
+				<h3>Celery</h3>
+				<img src="./assets/img/celery.png" />
+			</section>
+			<section>
+				<h3>Celery Task Definition</h3>
+				<img width="70%" src="./assets/img/celery_task.png" />
+			</section>
+			<section>
+				<h3>Periodic Pipelines</h3>
+				<img src="./assets/img/dag.png" />
+			</section>
+			<section>
+				<h3>API</h3>
+				<img src="./assets/img/dag.png" />
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Demo</h3>
+			</section>
+			<section>
+				<img src="./assets/img/eyes_article.png" />
+			</section>
+			<section>
+				<img src="./assets/img/eyes_entity.png" />
+			</section>
+			<section>
+				<img src="./assets/img/eyes_entity_relationship.png" />
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>Observability</h3>
+			</section>
+			<section>
+				<ul>
+					<li>System Health Check</li>
+					<li>SLI, SLO, SLA</li>
+				</ul>
+			</section>
+			<section>
+				<img src="./assets/img/argo_dashboard.png" />
+			</section>
+			<section>
+				<img width="70%" src="./assets/img/argo_details.png" />
+			</section>
+			<section>
+				<img src="./assets/img/kibana.png" />
+			</section>
+		</section>
+		<section>
+			<h3>Q & A</h3>
+		</section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script>
+    document.getElementById("currentDate").innerHTML =
+      moment().format("YYYY/MM/DD");
+  </script>
 </html>
